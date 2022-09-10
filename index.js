@@ -1,7 +1,4 @@
-
-
 const api_key = "AIzaSyAiot2IUbH1BZqaQIeB-u1q86pFAs3UvSM";
-
 
 let PopularInRegion = async () => {
   let url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&regionCode=IN&maxResults=40&key=${api_key}`;
@@ -26,7 +23,6 @@ let getData = async (query) => {
   let items = data.items;
 
   return items;
-
 };
 
 let append = (data) => {
@@ -43,8 +39,6 @@ let append = (data) => {
       },
       id: { videoId },
     }) => {
-    
-
       let thumbnail = document.createElement("img");
       thumbnail.setAttribute("class", "thumbnail");
       thumbnail.src = url;
@@ -68,8 +62,6 @@ let append = (data) => {
       let desc_box = document.createElement("div");
       desc_box.setAttribute("class", "desc_box");
       desc_box.append(title_box, channelName);
-
-     
 
       let card = document.createElement("div");
       card.setAttribute("class", "video");
@@ -96,8 +88,6 @@ let append2 = (data) => {
       },
       id,
     }) => {
-      
-
       let thumbnail = document.createElement("img");
       thumbnail.setAttribute("class", "thumbnail");
       thumbnail.src = url;
@@ -121,8 +111,6 @@ let append2 = (data) => {
       let desc_box = document.createElement("div");
       desc_box.setAttribute("class", "desc_box");
       desc_box.append(title_box, channelName);
-
-  
 
       let card = document.createElement("div");
       card.setAttribute("class", "video");
